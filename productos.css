@@ -1,0 +1,382 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*::before *::after{
+    box-sizing: inherit;
+}
+h1{font-size: 7em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+ul{list-style: none;}
+
+button{ 
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0,5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0,0.5);
+    color: #f2f2f2;
+    background-color:#95b52c ;
+}
+button:hover{
+    background-color: #201f1d83;
+}
+.container{
+    max-width: 1400px;
+    margin:auto;
+}
+.color-acento{color: #95b52c;}
+
+
+/*PARTE DE MENU Y BODY*/
+
+body{ 
+    background: linear-gradient(rgba(5, 7, 12, 0.235), rgba(5, 7, 12, 0)),
+    url(./img/Black-bricks-wall_1920x1200.jpg) no-repeat center center fixed;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    
+}
+.logo{
+
+    width: 150px;
+    height: 120px;
+}
+
+.ham{
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ham span{
+    display: block;
+    background-color: #f3f3f3;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+}
+
+
+nav .enlaces-menu{
+    display: flex;
+    padding: 0;
+}
+
+.enlaces-menu li{
+    padding: 0 40px;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.enlaces-menu li a{ 
+    text-decoration: none;
+    font-size: 2rem;
+    color: #f2f2f2;
+    font-weight: 600;
+}
+
+.enlaces-menu li:hover{
+background-color:#95b52c;
+border-radius: 20px;
+}
+
+
+footer{
+    min-height: 8vh;
+    font-size: 2em;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30,30, 30);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    font-size: 2em;
+}
+
+.grupo-1 .box h2{
+    color: #f2f2f2;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #f2f2f2;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.grupo-1 .red-social a:hover{
+    color: #95b52c;
+}
+
+/*cartas de productos*/
+
+.product-menu{
+    padding: 50px 0 150px 0;
+}
+
+.title{
+    color: #f3f3f3;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+.product{
+    display: flex;
+    position: relative;
+}
+
+
+
+.menu-nav{
+    display: flex;
+    margin-bottom: 45px;
+}
+
+.tab{
+    margin-right: 20px;
+    text-align: center;
+    padding: 10px 35px;
+    border-radius: 25px;
+    color: #A0A0A0;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: #f0f1f4;
+    cursor: pointer;
+}
+
+.tab.active{
+    background: linear-gradient(90deg,#E70B25 0%, #900314 100%);
+    color: #f3f3f3;
+}
+
+.tab.active::after{
+    content:"" ;
+    position: absolute;
+    width: 100%;
+}
+
+.tab-content.visible{
+    display: initial;
+}
+.box-container-1,
+.box-container-2,
+.box-container-3{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.box-1,
+.box-2,
+.box-3{
+    background-image: url(./img/bg-p.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 25px;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.2);
+
+}
+
+.box-1:nth-child(1)
+.box-1:nth-child(2),
+.box-1:nth-child(3),
+.box-1:nth-child(4){
+    display: inline-block;
+}
+
+.box-2:nth-child(1)
+.box-2:nth-child(2),
+.box-2:nth-child(3),
+.box-2:nth-child(4){
+    display: inline-block;
+}
+
+.box-3:nth-child(1)
+.box-3:nth-child(2),
+.box-3:nth-child(3),
+.box-3:nth-child(4){
+    display: inline-block;
+}
+
+.image{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image img{
+    width: 180px;
+}
+
+.content h3{
+    font-size: 20px;
+    color: #f2f2f2;
+}
+
+.content p{
+    color: #f0f1f4;
+    font-size: 15px;
+    outline-color: #A0A0A0;
+    line-height: 2;
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+
+
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #334;
+}
+
+.price{
+    font-size: 14px;
+    color: #A0A0A0;
+}
+
+.buy{
+    padding: 1px 15px 0px 15px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #95b52c 0%, #586e25 100%);
+
+}
+
+.buy img{
+    width: 20px;
+}
+
+
+
+@media(max-width:991px){
+    body{
+        overflow: hidden;
+    }
+    .logo{
+        position:absolute;
+        left:0;
+        top: 0; 
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 25px ;
+        padding-bottom: 25px;
+    }
+    .ham{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        transition: 0.2s  0.1s; 
+    }
+    .enlaces-menu{ 
+        flex-direction:column;
+        justify-content: space-around;
+        align-items:center;
+        height: 92vh;         
+        margin:0;
+        padding:0; 
+        display:none;
+        opacity:0;
+        transition: opacity 5s ease-out;
+        width:100%;
+        transition: all .6s ease;
+    }
+
+
+    .enlaces-menu li{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    }
+    
+    .hero {
+        text-align: center;
+        padding: 20px;
+    }
+
+    #somos-sakura #heroe .container h2{
+        text-align: center;
+    }
+
+    #somos-sakura #heroe .container p {
+        display: none;
+    }
+    #somos-sakura #heroe .container a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    #visitanos .mapa{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@keyframes muestraMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+    .enlaces-menu.activado{
+    display:flex; 
+    animation: muestraMenu 350ms ease-in-out both;
+    }
+
+    .br-1.animado{
+    transform: rotate(-45deg) translate(-10px, 8px);
+    }
+
+    .br-2.animado{
+    opacity: 0;
+    }
+    .br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+    }
+
+    .ham.girar:hover{
+        transform:rotate(360deg);
+    }
